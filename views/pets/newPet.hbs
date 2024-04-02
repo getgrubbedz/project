@@ -1,0 +1,33 @@
+<h2>Add a New Pet</h2>
+
+<form action="/pets/new" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="form-control" for="name">Name:</label>
+    <input class="form-control"type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control"for="type">Type:</label>
+    <input class="form-control"type="text" id="type" name="type" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control"for="breed">Breed (optional):</label>
+    <input class="form-control"type="text" id="breed" name="breed">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control"for="age">Age (optional):</label>
+    <input class="form-control"type="number" id="age" name="age">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control"for="img">Picture:</label>
+    <input class="form-control"type="file" id="img" name="img" required>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Create Pet</button>
+    <a class="btn btn-primary" href="/pets/manage">Back</a>
+  </div>
+</form>

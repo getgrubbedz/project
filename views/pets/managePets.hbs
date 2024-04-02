@@ -1,0 +1,50 @@
+<h2>Pet Management</h2>
+
+{{#if auth.petmgmt}}
+<a class="btn btn-primary" href="/pets/new">Add Pet</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each pets}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.type}}</td>
+      <td>{{this.breed}}</td>
+      <td>{{this.age}}</td>
+      <td><a class="btn btn-primary" href="/pets/{{this.id}}/edit">Update</a></td>
+      <td><a class="btn btn-primary" href="/pets/{{this.id}}/delete">Delete</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each pets}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.type}}</td>
+      <td>{{this.breed}}</td>
+      <td>{{this.age}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}

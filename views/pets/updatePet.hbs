@@ -1,0 +1,32 @@
+<h2>Update {{pet.name}}</h2>
+
+<form action="/pets/{{ pet.id }}" method="post">
+  <div class="form-group">
+    <label class="form-control" for="name">Name:</label>
+    <input class="form-control" type="text" id="name" name="name" value="{{ pet.name }}"><br>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="type">Type:</label>
+    <input class="form-control" type="text" id="type" name="type" value="{{ pet.type }}"><br>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="breed">Breed (optional):</label>
+    <input class="form-control" type="text" id="breed" name="breed" value="{{ pet.breed }}"><br>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="age">Age (optional):</label>
+    <input class="form-control" type="number" id="age" name="age" value="{{ pet.age }}"><br>
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="img">Picture (optional):</label>
+    <input class="form-control" type="file" id="img" name="img"><br>
+  </div>
+
+  <div class="form-group"></div>
+    <button class="btn" type="submit">Update</button>
+  </div>
+</form>

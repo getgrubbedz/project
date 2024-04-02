@@ -1,0 +1,14 @@
+<h2>{{user.first}} {{user.last}}</h2>
+<ul class="list-group pt-2 pb-2">
+  <li class="list-group-item">Username: {{user.username}}</li>
+  <li class="list-group-item">Email: {{user.email}}</li>
+  <li class="list-group-item">Role: {{user.role}}</li>
+</ul>
+
+<div class="pt-2 pb-2">
+  <a class="btn btn-primary" href="/users/{{user.username}}/edit">Update User</a>
+  <a class="btn btn-primary" href="/users/{{user.username}}/delete">Delete User</a>
+  {{#if auth.usermgmt}}
+  <a class="btn btn-primary" href="/users">Back to User Management</a>
+  {{/if}}
+</div>

@@ -1,0 +1,29 @@
+<h2> {{pet.name}} </h2>
+{{#if pet.img}}
+<img class="pt-2 pb-2" src="/images/{{pet.img}}">
+{{/if}}
+<ul class="list-group pt-2 pb-2">
+    <li class="list-group-item"> Type: {{pet.type}} </li>
+    {{#if pet.breed}}
+    <li class="list-group-item"> Breed: {{pet.breed}} </li>
+    {{else}}
+    <li class="list-group-item"> Breed: Unknown </li>
+    {{/if}}
+    {{#if pet.age}}
+    <li class="list-group-item"> Age: {{pet.age}} </li>
+    {{else}}
+    <li class="list-group-item"> Age: Unknown </li>
+    {{/if}}
+</ul>
+
+<div class="pt-2 pb-2">
+    {{#if auth.petmgmt}}
+    <a class="btn btn-primary" href="/pets/{{ pet.id }}/edit">Update Pet</a>
+    <a class="btn btn-primary" href="/pets/{{ pet.id }}/delete">Delete Pet</a>
+    {{/if}}
+    {{#if auth.user}}
+    <a class="btn btn-primary" href="/pets/manage">Manage Pets</a>
+    {{/if}}
+    <button class="btn btn-primary">Contact Us</button>
+    <a class="btn btn-primary" href="/pets">Back to Pet List</a>
+</div>

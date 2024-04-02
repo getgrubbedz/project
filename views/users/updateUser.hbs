@@ -1,0 +1,33 @@
+<h2>Update {{user.username}}</h2>
+
+<form action="/users/{{user.username}}" method="post">
+  <div class="form-group">
+    <label class="form-control" for="first">First Name:</label>
+    <input class="form-control" type="text" id="first" name="first" value="{{user.first}}">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="last">Last Name:</label>
+    <input class="form-control" type="text" id="last" name="last" value="{{user.last}}">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="email">Email:</label>
+    <input class="form-control" type="text" id="email" name="email" value="{{user.email}}">
+  </div>
+
+  <div class="form-group">
+    <label class="form-control" for="role">Role:</label>
+    <select class="form-control" id="role" name="role">
+      <option value="None">None</option>
+      <option value="PetAdmin">Pet Admin</option>
+      <option value="UserAdmin">User Admin</option>
+      <option value="FullAdmin">Full Admin</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Update</button>
+    <a class="btn btn-primary" href="/users/{{user.username}}">Back</a>
+  </div>
+</form>

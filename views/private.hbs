@@ -1,0 +1,8 @@
+<h2>You made it!</h2>
+{{auth.user}}
+{{auth.fulladmin}}
+{{auth.useradmin}}
+{{auth.petadmin}}
+<form action="/auth/logout" method="post">
+  <input type="submit" name="logout" value="Logout">
+</form>

@@ -1,0 +1,26 @@
+<h2>User Management</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td><a href="/users/{{this.username}}">{{this.username}}</a></td>
+      <td>{{this.first}} {{this.last}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.role}}</td>
+      <td><a class="btn btn-primary" href="/users/{{this.username}}/edit">Update</a></td>
+      <td><a class="btn btn-primary" href="/users/{{this.username}}/delete">Delete</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
